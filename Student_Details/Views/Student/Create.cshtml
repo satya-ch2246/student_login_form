@@ -1,0 +1,189 @@
+﻿@model Student_Details.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-bottom: 150px;
+            padding-left:30%;
+            padding-top: 45px;
+            background-color:lightcyan;
+        }
+
+        .container {
+            width: 400px;
+            padding-right: 70px;
+            border:solid 1px blue;
+           padding-left:40px;
+           background-color:white;
+           
+        }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            width:120px;
+            font-size:13px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        TextBoxFor {
+            width: 500px;
+            height: 35px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            padding-left: 8px;
+        }
+
+        .student {
+            border: 1px solid;
+            width: 390px;
+            height: 30px;
+            border-radius: 15px;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 10px;
+            background-color: #4682B4;
+            font-size: 17px;
+            color: white;
+        }
+
+        .button {
+            border: 1px solid green;
+            border-radius: 30%;
+            width: 100px;
+            height: 25px;
+            margin-bottom:20px;
+            background-color:dodgerblue;
+            color:white;
+            margin-left:150px;
+
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .row-list {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .message-color{
+            color:royalblue;
+        }
+    </style>
+</head>
+
+
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <div class="container">
+            <h3 class="student">Student Information</h3>
+            <div class="row">
+                <div class="field">
+                    @Html.Label("FirstName")
+                    @Html.TextBoxFor(a => a.FirstName)
+                </div>
+                <div class="field">
+                    @Html.Label("MiddleName")
+                    @Html.TextBoxFor(a => a.MiddleName)
+                </div>
+                <div class="field">
+                    @Html.Label("LastName")
+                    @Html.TextBoxFor(a => a.LastName)
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    @Html.Label("DateOfBirth")
+                    @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                </div>
+                <div class="field">
+                    @Html.Label("StudentId")
+                    @Html.TextBoxFor(a => a.StudentId)
+                </div>
+            </div>
+            <h3 class="student">Address</h3>
+            <div class="row">
+                <div class="field">
+                    @Html.Label("Address")
+                    @Html.TextBoxFor(a => a.Address)
+                </div>
+                <div class="field">
+                    @Html.Label("City")
+                    @Html.TextBoxFor(a => a.City)
+                </div>
+                <div class="field">
+                    @Html.Label("State/Province")
+                    @Html.TextBoxFor(a => a.State)
+                </div>
+            </div>
+            <div class="row">
+                <div class="field">
+                    @Html.Label("Country")
+                    @Html.DropDownListFor(a => a.Country, new SelectList(TempData["Country"] as List<string>), "--Select--")
+                </div>
+                <div class="field">
+                    @Html.Label("Zip")
+                    @Html.TextBoxFor(a => a.ZIP)
+                </div>
+            </div>
+            <h3 class="student">Contact Information</h3>
+            <div class="row">
+                <div class="field">
+                    @Html.Label("Email")
+                    @Html.TextBoxFor(a => a.Email)
+                </div>
+                <div class="field">
+                    @Html.Label("Mobile")
+                    @Html.TextBoxFor(a => a.Mobile)
+                </div>
+            </div>
+            <div class="row-list">
+                @Html.Label("Courses")
+                <div class="field">
+
+                    <div class="box">
+                        @foreach (var item in TempData["Courses"] as List<string>)
+                        {
+
+                            <input type="checkbox" name="Courses" value="@item" />
+                            <span>@item</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="button" type="submit" value="Register" />
+            </div>
+
+           <p style="color:forestgreen"> @TempData["message"]</p>
+            </div>
+            }
+
+</body>
+</html>
