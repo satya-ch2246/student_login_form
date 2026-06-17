@@ -10,21 +10,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             padding-bottom: 150px;
-            padding-left:31%;
+            padding-left: 31%;
             padding-top: 45px;
-            background-color:lightcyan;
+            background-color: whitesmoke;
         }
-
+       
         .container {
             width: 400px;
             padding-right: 70px;
-            border:solid 1px blue;
-           padding-left:40px;
-           background-color:white;
-           
+            border: solid 1px rgba(162, 170, 173, 0);
+            padding-left: 40px;
+            background-color: white;
+            border-radius: 10px;
         }
 
         .row {
@@ -36,8 +37,8 @@
         .field {
             display: flex;
             flex-direction: column;
-            width:120px;
-            font-size:13px;
+            width: 120px;
+            font-size: 13px;
             margin-bottom: 10px;
         }
 
@@ -57,26 +58,33 @@
         .student {
             border: 1px solid;
             width: 390px;
-            height: 30px;
+            height: 25px;
             border-radius: 15px;
             padding-top: 10px;
             padding-right: 30px;
             padding-left: 10px;
             background-color: #4682B4;
-            font-size: 17px;
+            font-size: 13px;
             color: white;
         }
 
         .button {
+            margin-top: 15px;
             border: 1px solid green;
-            border-radius: 30%;
-            width: 100px;
-            height: 25px;
-            margin-bottom:20px;
-            background-color:dodgerblue;
-            color:white;
-            margin-left:150px;
+            border-radius: 5px;
+            width: 300px;
+            height: 28px;
+            margin-bottom: 20px;
+            background-color: dodgerblue;
+            color: white;
+            margin-left: 70px;
+            gap: 10px;
+        }
 
+        .btn-style {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .box {
@@ -90,30 +98,57 @@
             gap: 15px;
             margin-bottom: 20px;
         }
-        .message-color{
-            color:royalblue;
+
+        .message-color {
+            color: royalblue;
         }
+
+        .head {
+            padding-left: 70px;
+          
+        }
+
+        h2 {
+            padding-left: 25px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 6px;
+            margin-bottom: 10px;
+        }
+
+        .signIn {
+            display: flex
+        }
+        
     </style>
 </head>
 
-
 <body>
+    
     @using (Html.BeginForm())
     {
 
         <div class="container">
+             <div class="head">
+                <h2>Create account</h2>
+                <p>Please fill in the details to get started.</p>
+            </div>
             <h3 class="student">Student Information</h3>
             <div class="row">
                 <div class="field">
-                    @Html.Label("FirstName")
+                    @Html.Label("First Name")
                     @Html.TextBoxFor(a => a.FirstName)
                 </div>
                 <div class="field">
-                    @Html.Label("MiddleName")
+                    @Html.Label("Middle Name")
                     @Html.TextBoxFor(a => a.MiddleName)
                 </div>
                 <div class="field">
-                    @Html.Label("LastName")
+                    @Html.Label("Last Name")
                     @Html.TextBoxFor(a => a.LastName)
                 </div>
             </div>
@@ -123,7 +158,7 @@
                     @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
                 </div>
                 <div class="field">
-                    @Html.Label("StudentId")
+                    @Html.Label("Student Id")
                     @Html.TextBoxFor(a => a.StudentId)
                 </div>
             </div>
@@ -178,12 +213,16 @@
                 </div>
             </div>
             <div>
-                <input class="button" type="submit" value="Register" />
-            </div>
+                <input class="button" type="submit" value="Create" />
 
-           <p style="color:forestgreen"> @TempData["message"]</p>
             </div>
-            }
+            <div class="signIn">
+                <p>Already have an account?</p>
+                <p>Sign in</p>
+            </div>
+            <p style="color:forestgreen"> @TempData["message"]</p>
+        </div>
+    }
 
 </body>
 </html>
