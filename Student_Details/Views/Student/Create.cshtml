@@ -9,218 +9,319 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Create</title>
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            padding-bottom: 150px;
-            padding-left: 31%;
-            padding-top: 45px;
-            background-color: whitesmoke;
-        }
-       
-        .container {
-            width: 400px;
-            padding-right: 70px;
-            border: solid 1px rgba(162, 170, 173, 0);
-            padding-left: 40px;
-            background-color: white;
-            border-radius: 10px;
-        }
+  <style>
 
-        .row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-
-        .field {
-            display: flex;
-            flex-direction: column;
-            width: 120px;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-
-        label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        TextBoxFor {
-            width: 500px;
-            height: 35px;
-            border: 1px solid #000;
-            border-radius: 4px;
-            padding-left: 8px;
-        }
-
-        .student {
-            border: 1px solid;
-            width: 390px;
-            height: 25px;
-            border-radius: 15px;
-            padding-top: 10px;
-            padding-right: 30px;
-            padding-left: 10px;
-            background-color: #4682B4;
-            font-size: 13px;
-            color: white;
-        }
-
-        .button {
-            margin-top: 15px;
-            border: 1px solid green;
-            border-radius: 5px;
-            width: 300px;
-            height: 28px;
-            margin-bottom: 20px;
-            background-color: dodgerblue;
-            color: white;
-            margin-left: 70px;
-            gap: 10px;
-        }
-
-        .btn-style {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .box {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .row-list {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .message-color {
-            color: royalblue;
-        }
-
-        .head {
-            padding-left: 70px;
+      .container {
+          display: flex;
+          justify-content: left;
+          background-color:whitesmoke;
+          width: 100%;
+          height: 900px;
+          margin-top: 5px;
           
-        }
+      }
+      .left-section {
+         
+          margin-top: 10px;
+          padding-top: 60px;
+          margin-right: 200px;
+          padding-left: 150px;
+          width: 300px;
+          height: 720px;
+          margin-left: 20px;
+          margin-right: 10px;
+      }
+      .right-section {
+          border: 1px solid white;
+          background-color:white;
+          margin-top: 10px;
+          border-radius:5px;
+          width: 500px;
+          height: 720px;
+      }
+      .content{
+          width:150px;
+          padding-left:10px;
+          
+      }
+      h2{
+          margin-bottom:0px;
+      }
+      p {
+          margin-bottom: 10px;
+      }
+      .image{
+          margin-top:10px;
+          width:250px;
+          height:250px;
+          border-radius:0px;
+      }
+      .row {
+          display: flex;
+          gap: 8px;
+          margin-bottom: 10px;
+          padding-left: 50px;
+      }
 
-        h2 {
-            padding-left: 25px;
-            margin-top: 20px;
-            margin-bottom: 0px;
-            font-size: 20px;
-        }
+      .field {
+          display: flex;
+          flex-direction: column;
+          width: 120px;
+          font-size: 13px;
+          margin-bottom: 10px;
+          
+      }
 
-        p {
-            margin-top: 6px;
-            margin-bottom: 10px;
-        }
+      .field1 {
+          display: flex;
+          flex-direction: column;
+          margin-left: 20px;
+          width: 300px;
+          font-size: 13px;
+          margin-bottom: 4px;
+      }
+          .field1 p{
+              font-size:15px;
+          }
 
-        .signIn {
-            display: flex
-        }
-        
-    </style>
+
+          label {
+              margin-bottom: 5px;
+              font-weight: bold;
+          }
+
+      TextBoxFor {
+          width: 500px;
+          height: 35px;
+          border: 1px solid #000;
+          border-radius: 4px;
+          padding-left: 8px;
+      }
+
+      .student {
+          border: 1px solid;
+          width: 350px;
+          height: 25px;
+          border-radius: 15px;
+          padding-top: 10px;
+          padding-right: 30px;
+          padding-left: 10px;
+          margin-left: 50px;
+          background-color: #4682B4;
+          font-size: 15px;
+          color: white;
+      }
+
+      .button {
+          margin-top: 15px;
+          border: 1px solid green;
+          border-radius: 5px;
+          width: 300px;
+          height: 28px;
+          margin-bottom: 0px;
+          background-color: dodgerblue;
+          color: white;
+          margin-left: 70px;
+          gap: 10px;
+      }
+
+      .btn-style {
+          display: flex;
+          gap: 5px;
+          margin-bottom: 8px;
+      }
+
+      .box {
+          display: flex;
+          align-items: center;
+          margin-right: 300px;
+          gap: 5px;
+      }
+
+      .row-list {
+          display: flex;
+          gap: 15px;
+          margin-bottom: 3px;
+          margin-left: 50px;
+      }
+
+      .message-color {
+          color: royalblue;
+      }
+
+      .head {
+          display: flex;
+          flex-direction: column;
+          margin-left: 40px;
+      }
+
+      p {
+          margin-bottom: 0px;
+      }
+
+      h2 {
+          margin-bottom: 0px;
+      }
+
+      .signIn {
+          display: flex;
+          flex-direction: column;
+          margin-top:0px;
+          margin-left: 430px;
+          margin-left: 50px;
+      }
+
+      .create {
+          display: flex;
+          flex-direction: column;
+          margin-left: 50px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          gap: 10px;
+      }
+
+      .btn {
+          margin-left: 30px;
+          margin-top:4px;
+          margin-bottom:0px;
+      }
+
+      h4 {
+          margin-top: 10px;
+      }
+
+      .p1 {
+          display: flex;
+          flex-direction: column;
+          margin-left: 50px;
+          width: 300px;
+      }
+
+      .field3 {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          font-size: 15px;
+          margin-bottom: 0px;
+          margin-left: 50px;
+      }
+
+  </style>
 </head>
 
 <body>
     
     @using (Html.BeginForm())
     {
-
         <div class="container">
-             <div class="head">
-                <h2>Create account</h2>
-                <p>Please fill in the details to get started.</p>
+            <div class="left-section">
+              <div class="content">
+                  <h2>Create your account</h2>
+                  <p>Join our institute and start your journey with us.</p>
+                  <div class="image">
+                      <image src="https://www.bing.com/th/id/OIP.TF9lhW2218uSdu1K3hMeWgHaGi?w=193&h=170&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"/>
+                  </div>
+              </div>
             </div>
-            <h3 class="student">Student Information</h3>
-            <div class="row">
-                <div class="field">
-                    @Html.Label("First Name")
-                    @Html.TextBoxFor(a => a.FirstName)
-                </div>
-                <div class="field">
-                    @Html.Label("Middle Name")
-                    @Html.TextBoxFor(a => a.MiddleName)
-                </div>
-                <div class="field">
-                    @Html.Label("Last Name")
-                    @Html.TextBoxFor(a => a.LastName)
-                </div>
-            </div>
-            <div class="row">
-                <div class="field">
-                    @Html.Label("DateOfBirth")
-                    @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
-                </div>
-                <div class="field">
-                    @Html.Label("Student Id")
-                    @Html.TextBoxFor(a => a.StudentId)
-                </div>
-            </div>
-            <h3 class="student">Address</h3>
-            <div class="row">
-                <div class="field">
-                    @Html.Label("Address")
-                    @Html.TextBoxFor(a => a.Address)
-                </div>
-                <div class="field">
-                    @Html.Label("City")
-                    @Html.TextBoxFor(a => a.City)
-                </div>
-                <div class="field">
-                    @Html.Label("State/Province")
-                    @Html.TextBoxFor(a => a.State)
-                </div>
-            </div>
-            <div class="row">
-                <div class="field">
-                    @Html.Label("Country")
-                    @Html.DropDownListFor(a => a.Country, new SelectList(TempData["Country"] as List<string>), "--Select--")
-                </div>
-                <div class="field">
-                    @Html.Label("Zip")
-                    @Html.TextBoxFor(a => a.ZIP)
-                </div>
-            </div>
-            <h3 class="student">Contact Information</h3>
-            <div class="row">
-                <div class="field">
-                    @Html.Label("Email")
-                    @Html.TextBoxFor(a => a.Email)
-                </div>
-                <div class="field">
-                    @Html.Label("Mobile")
-                    @Html.TextBoxFor(a => a.Mobile)
-                </div>
-            </div>
-            <div class="row-list">
-                @Html.Label("Courses")
-                <div class="field">
-
-                    <div class="box">
-                        @foreach (var item in TempData["Courses"] as List<string>)
-                        {
-
-                            <input type="checkbox" name="Courses" value="@item" />
-                            <span>@item</span>
-                        }
+            <div class="right-section">
+                
+                <div class="head">
+                    <div class="field1">
+                        <h2>Create account</h2>
+                        <p>Please fill in the details to get started.</p>
                     </div>
                 </div>
-            </div>
-            <div>
-                <input class="button" type="submit" value="Create" />
+                <div>
+                    <h3 class="student">Student Information</h3>
+                </div>
+                <div class="row">
+                    <div class="field">
+
+                        @Html.Label("First Name")
+                        @Html.TextBoxFor(a => a.FirstName)
+                    </div>
+                    <div class="field">
+                        @Html.Label("Middle Name")
+                        @Html.TextBoxFor(a => a.MiddleName)
+                    </div>
+                    <div class="field">
+                        @Html.Label("Last Name")
+                        @Html.TextBoxFor(a => a.LastName)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        @Html.Label("DateOfBirth")
+                        @Html.TextBoxFor(m => m.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    </div>
+                    <div class="field">
+                        @Html.Label("Student Id")
+                        @Html.TextBoxFor(a => a.StudentId)
+                    </div>
+                </div>
+                <h3 class="student">Address</h3>
+                <div class="row">
+                    <div class="field">
+                        @Html.Label("Address")
+                        @Html.TextBoxFor(a => a.Address)
+                    </div>
+                    <div class="field">
+                        @Html.Label("City")
+                        @Html.TextBoxFor(a => a.City)
+                    </div>
+                    <div class="field">
+                        @Html.Label("State/Province")
+                        @Html.TextBoxFor(a => a.State)
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        @Html.Label("Country")
+                        @Html.DropDownListFor(a => a.Country, new SelectList(TempData["Country"] as List<string>), "--Select--")
+                    </div>
+                    <div class="field">
+                        @Html.Label("Zip")
+                        @Html.TextBoxFor(a => a.ZIP)
+                    </div>
+                </div>
+                <h3 class="student">Contact Information</h3>
+                <div class="row">
+                    <div class="field">
+                        @Html.Label("Email")
+                        @Html.TextBoxFor(a => a.Email)
+                    </div>
+                    <div class="field">
+                        @Html.Label("Mobile")
+                        @Html.TextBoxFor(a => a.Mobile)
+                    </div>
+                </div>
+                <div class="row-list">
+                    @Html.Label("Courses")
+                    <div class="field">
+
+                        <div class="box">
+                            @foreach (var item in TempData["Courses"] as List<string>)
+                            {
+
+                                <input type="checkbox" name="Courses" value="@item" />
+                                <span>@item</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <input class="button" type="submit" value="Create" />
+
+                </div>
+                <div class="signIn">
+                    <div class="field3">
+                        <p>Already have an account?</p>
+                       @Html.ActionLink("Sign in","","")
+                    </div>
+                </div>
+                <p style="color:forestgreen"> @TempData["message"]</p>
 
             </div>
-            <div class="signIn">
-                <p>Already have an account?</p>
-                <p>Sign in</p>
-            </div>
-            <p style="color:forestgreen"> @TempData["message"]</p>
         </div>
     }
 
